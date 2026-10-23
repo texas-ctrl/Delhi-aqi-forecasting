@@ -29,7 +29,7 @@ This is a student internship-portfolio and research project using Delhi air-qual
 - The daily trend plot's x-axis now labels years instead of repeating every month name across the eight-year chart.
 - The EDA plot-saving code now saves the monthly trend, monthly boxplot, and yearly-average chart to their own matching image filenames.
 - The `eda_plots` images were taken from actual notebook chart outputs.
-- The obsolete 2022–2025 cleaned CSV is being removed from the tracked GitHub files. Generated 2018–2025 processed CSVs and raw inputs are not part of the focused code-and-plot update.
+- The obsolete 2022–2025 cleaned CSV is being removed from the tracked GitHub files. Corrected 2024 AQI source workbooks are included so GitHub has the inputs that produced the accepted 2024 results. The added 2018–2021 AQI workbooks, sensor CSVs, and generated 2018–2025 processed CSVs remain local and are not included in this update.
 - Notebook prose and comments now describe the event rule with the project's AQI thresholds, without claiming an official policy action.
 
 ## Related work reviewed
