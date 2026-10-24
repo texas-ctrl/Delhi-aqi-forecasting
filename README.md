@@ -4,7 +4,7 @@ This project studies Delhi’s hourly AQI from 2018 to 2025 using CPCB city-leve
 
 ## Current research question
 
-The EDA is preparing a daily forecast issued at 4 PM: will Delhi’s city AQI be at least 301 exactly 24, 48, or 72 hours later? The primary candidate label is the exact +48-hour value, with starting AQI below 301. A secondary label records whether either the +24-hour or +48-hour endpoint reaches 301. These are exploratory targets; modeling has not started.
+The EDA is preparing a daily forecast issued at 4 PM: will Delhi’s city AQI be at least 301 exactly 24, 48, or 72 hours later? The primary candidate label is the exact +48-hour value, with starting AQI below 301. Secondary labels record whether either the +24-hour or +48-hour endpoint reaches 301, and whether any hourly AQI in the next 48 hours reaches 301. These are exploratory targets; modeling has not started. Planned comparisons are literal persistence, AQI-only risk, AQI plus winter timing, and later weather/pollutant models. Validation is small, and the 2024–25 test winter stays untouched until model and alert-threshold choices are made.
 
 ## Data
 
