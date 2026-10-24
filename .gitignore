@@ -1,3 +1,6 @@
-raw_data/
-aqi_target/
-processed_data/
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+raw_data/**/Raw_Data_2017_*.csv
+raw_data/**/Raw_Data_2026_*.csv
+aqi_target/2025/* (1).xlsx
