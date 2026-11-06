@@ -1,0 +1,9 @@
+outcome,alpha,model best cutoff,model locked cutoff,rule AQI>=250
+target_48h_301,0.1,0.22,0.02,-0.33
+target_48h_301,0.2,0.42,0.38,0.24
+target_48h_301,0.3,0.55,0.45,0.37
+target_48h_301,0.5,0.34,-0.04,-0.08
+target_any_48h_301,0.1,-0.02,-0.6,-1.01
+target_any_48h_301,0.2,0.22,0.09,-0.06
+target_any_48h_301,0.3,0.37,0.33,0.25
+target_any_48h_301,0.5,0.36,0.13,0.12

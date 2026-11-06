@@ -1,0 +1,26 @@
+{
+  "frozen_on": "2026-11-06",
+  "features": [
+    "AQI",
+    "season_day",
+    "AT (\u00b0C)",
+    "RH (%)",
+    "WS (m/s)"
+  ],
+  "cutoffs": {
+    "target_48h_301": 0.3,
+    "target_any_48h_301": 0.4
+  },
+  "trained_on_winters": [
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "sklearn_version": "1.7.2",
+  "python_version": "3.10.11",
+  "note": "Research prototype. Not an operational warning system."
+}
