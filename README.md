@@ -64,9 +64,33 @@ The oracle experiment includes **realized next-48-hour rain**, which is unavaila
 
 `models/frozen_models.joblib` and its JSON metadata contain final refits trained on winters 2018–19 and 2021–26, including the 2025–26 holdout. These artifacts are for later use after the retrospective evaluation; they must not be used to reproduce the 2025–26 test metrics. The onset cutoffs are 0.3 (exact +48h) and 0.4 (any-hour +48h). The clearance model has no locked alert cutoff. For a prospective 2026–27 evaluation, freeze the outcomes, model inputs, all thresholds, and baseline comparisons before examining that winter’s results. Until predictive inputs are available at the intended issue time, describe the model as a retrospective study using observed 4 PM measurements.
 
-The PM-derived AQI is a proxy and is not substituted for official city AQI. The January–February 2021 discrepancy is unresolved; do not treat the PM-derived proxy as a replacement for official AQI without a reproducible calculation and CPCB bulletin spot checks; see [2021 source notes](aqi_target/2021/README.md). When discussing the GRAP context, do not treat this project as a test of the full GRAP decision rule. See the [CAQM annual comparison](https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1888090&lang=2&reg=48).
+The PM-derived AQI is a proxy and is not substituted for official city AQI. The January–February 2021 discrepancy is unresolved; do not treat the PM-derived proxy as a replacement for official AQI without a reproducible calculation and CPCB bulletin spot checks; see [2021 source notes](aqi_target/2021/README.md). When discussing the GRAP context, do not treat this project as a test of the full GRAP decision rule. See the [CAQM annual comparison](https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1888090&lang=2&reg=48) and the [local CPCB/CAQM source review](docs/references/caqm_cpcb_published_value_review.pdf).
 
 Run notebooks in order with the Jupyter working directory set to `notebooks/`. Relative paths use `../` to reach the repository folders. Install packages from `requirements.txt` and select that Python environment as the Jupyter kernel.
+
+## Interactive demo
+
+The optional Streamlit interface is a local research prototype. It can replay past winter days using saved out-of-fold scores or estimate a 48-hour risk from user-entered 4 PM AQI and weather values. It does not forecast an AQI number or retrieve live readings.
+
+From the repository root, install the full notebook and app dependencies with `pip install -r requirements.txt`, then start it with:
+
+```text
+streamlit run app.py
+```
+
+The app reads the frozen model files from `models/` and its small historical display datasets from `app_data/`. Treat the 2025–26 exit results as exploratory, as described above.
+
+For an app-only environment with the recorded package versions, use `pip install -r requirements-research.txt` instead.
+
+## Repository layout
+
+- `notebooks/` — data exploration, preparation, and modeling notebooks.
+- `src/` — reusable data preparation scripts.
+- `raw_data/`, `aqi_target/`, `processed_data/` — source and processed data.
+- `eda_plots/`, `results/` — generated figures and result tables.
+- `models/` — serialized models and metadata.
+- `app.py`, `app_data/` — Streamlit prototype and its small display datasets.
+- `docs/references/` — source-review documents.
 
 ## Publication positioning
 
