@@ -3,7 +3,6 @@ __pycache__/
 .venv/
 *.pyc
 raw_data/**/Raw_Data_2017_*.csv
-raw_data/**/Raw_Data_2026_*.csv
 # Browser-created copies of 2025 CPCB workbooks; verified byte-identical to originals.
 aqi_target/2025/* (1).xlsx
 # Unrelated demo video accidentally saved in the AQI target folder.
